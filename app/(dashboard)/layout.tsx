@@ -1,7 +1,11 @@
+import { Inter } from 'next/font/google';
+import clsx from 'clsx';
+
 import '../globals.css';
 import Sidebar from '@/components/Sidebar';
-import clsx from 'clsx';
 import GlassPane from '@/components/GlassPane';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Project Management',
@@ -16,7 +20,7 @@ export default function DashboardRootLayout({
   return (
     <html lang='en' className={clsx('dark')}>
       <head />
-      <body className='h-screen w-screen candy-mesh p-6'>
+      <body className={`h-screen w-screen candy-mesh p-6 ${inter.className}`}>
         <GlassPane className='w-full h-full p-6 flex align-center container mx-auto'>
           <Sidebar />
           <main className='w-full pl-6 h-full'>{children}</main>

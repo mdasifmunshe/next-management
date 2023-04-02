@@ -1,11 +1,9 @@
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import AuthForm from '@/components/AuthForm';
 
 export default function Signin() {
   return (
     <div>
-      <div className='text-3xl font-bold underline'>Hello Signin!</div>
+      <AuthForm mode='signin' />
     </div>
   );
 }

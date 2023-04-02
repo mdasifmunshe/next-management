@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-const Input = ({ className, ...props }: { className: React.ReactNode }) => {
+const Input = ({ className, ...props }: { className?: string }) => {
   return (
     <input
       className={clsx(

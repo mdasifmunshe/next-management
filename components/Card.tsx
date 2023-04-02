@@ -5,7 +5,7 @@ const Card = ({
   className,
 }: {
   children: React.ReactNode;
-  className: React.ReactNode;
+  className?: string;
 }) => {
   return (
     <div
