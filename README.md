@@ -1,4 +1,6 @@
-This is a [Next.js](https://beta.nextjs.org/docs) project bootstrapped with [`yarn create next-app`]
+# Project Management
+
+This is a [Next.js](https://beta.nextjs.org/docs) project bootstrapped with `yarn create next-app`
 
 ## Getting Started
 
