@@ -16,7 +16,7 @@ export default async function register(request: NextRequest) {
     });
 
     const jwt = await createJWT(user);
-    const serial = serialize(process.env.COOKIE_NAME, jwt, {
+    const cookie = serialize(process.env.COOKIE_NAME, jwt, {
       httpOnly: true,
       path: '/',
       maxAge: 60 * 60 * 24 * 7,
@@ -25,7 +25,7 @@ export default async function register(request: NextRequest) {
     return new Response('Hello, Next.js!', {
       status: 200,
       headers: {
-        'Set-Cookie': `${serial}`,
+        'Set-Cookie': `${cookie}`,
       },
     });
   } catch (error) {

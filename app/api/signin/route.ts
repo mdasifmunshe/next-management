@@ -23,16 +23,16 @@ export async function POST(request: NextRequest) {
   }
 
   const jwt = await createJWT(user);
-  const serial = serialize(process.env.COOKIE_NAME, jwt, {
+  const cookie = serialize(process.env.COOKIE_NAME, jwt, {
     httpOnly: true,
     path: '/',
     maxAge: 60 * 60 * 24 * 7,
   });
 
-  return new Response('Hello, Next.js!', {
+  return new Response('Successfull Signin', {
     status: 200,
     headers: {
-      'Set-Cookie': `${serial}`,
+      'Set-Cookie': `${cookie}`,
     },
   });
 }
